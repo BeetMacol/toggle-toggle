@@ -1,0 +1,16 @@
+{
+  "key.toggle-toggle.toggle-sneak": "Toggle Sneak Mode",
+  "key.toggle-toggle.toggle-sprint": "Toggle Sprint Mode",
+
+  "toggle-toggle.switch.sneak.hold": "Sneak mode is now set to Hold",
+  "toggle-toggle.switch.sneak.toggle": "Sneak mode is now set to Toggle",
+  "toggle-toggle.switch.sprint.hold": "Sprint mode is now set to Hold",
+  "toggle-toggle.switch.sprint.toggle": "Sprint mode is now set to Toggle",
+
+  "text.autoconfig.toggle-toggle.title": "Toggle Toggle Configuration",
+  "text.autoconfig.toggle-toggle.option.communicationWay": "Way of communication",
+  "text.autoconfig.toggle-toggle.option.communicationWay.@Tooltip": "The way Toggle Toggle will communicate when you change the sneak or sprint modes",
+  "option.toggle-toggle.communication-way.none": "None",
+  "option.toggle-toggle.communication-way.action-bar": "Action bar",
+  "option.toggle-toggle.communication-way.chat": "Chat"
+}

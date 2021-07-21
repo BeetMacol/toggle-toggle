@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "toggletoggle",
-  "version": "0.0.0",
+  "id": "toggle-toggle",
+  "version": "${version}",
 
-  "name": "ToggleToggle",
-  "description": "Minecraft mod that allows you to switch sneak and sprint between hold and toggle.",
+  "name": "Toggle Toggle",
+  "description": "A simple Minecraft mod adding two keybindings for switching sneaking or sprinting methods between hold and toggle.",
   "authors": [
     "BeetMacol"
   ],
@@ -13,17 +13,22 @@
   },
 
   "license": "MIT",
-  "icon": "assets/bmmtt/icon.png",
+  "icon": "assets/toggle-toggle/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
-      "me.beetmacol.toggletoggle.Main"
+      "com.beetmacol.toggletoggle.ToggleToggle::init"
+    ],
+    "modmenu": [
+      "com.beetmacol.toggletoggle.ToggleToggleModMenu"
     ]
   },
 
   "depends": {
-    "fabricloader": ">=0.7.4",
-    "minecraft": "1.15.x"
+    "java": ">=16",
+    "minecraft": "1.17.x",
+    "fabricloader": ">=0.11.3",
+    "fabric": "*"
   }
 }

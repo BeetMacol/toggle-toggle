@@ -1,0 +1,16 @@
+{
+  "key.toggle-toggle.toggle-sneak": "Zmień Tryb Skradania",
+  "key.toggle-toggle.toggle-sprint": "Zmień Tryb Sprintu",
+
+  "toggle-toggle.switch.sneak.hold": "Tryb Skradania został zmieniony na Trzymanie",
+  "toggle-toggle.switch.sneak.toggle": "Tryb Skradania został zmieniony na Przełączanie",
+  "toggle-toggle.switch.sprint.hold": "Tryb Sprintu został zmieniony na Trzymanie",
+  "toggle-toggle.switch.sprint.toggle": "Tryb Sprintu został zmieniony na Przełączanie",
+
+  "text.autoconfig.toggle-toggle.title": "Konfiguracja Toggle Toggle",
+  "text.autoconfig.toggle-toggle.option.communicationWay": "Sposób komunikacji",
+  "text.autoconfig.toggle-toggle.option.communicationWay.@Tooltip": "Sposób w jaki Toggle Toggle poinformuje cię o zmianie trybów skradania lub sprintu",
+  "option.toggle-toggle.communication-way.none": "Brak",
+  "option.toggle-toggle.communication-way.action-bar": "Pasek akcji",
+  "option.toggle-toggle.communication-way.chat": "Czat"
+}
