@@ -10,7 +10,7 @@ This mod adds a way to quickly change those two options without going to the set
 ## Default keys
 | Function | Key |
 |--:|:-:|
-| Change Sneak Mode | Z |
-| Change Sprint Mode | X |
+| Change Sneak Mode | V |
+| Change Sprint Mode | B |
 
 These keybindings can be changed freely in the Controls (`Game Menu` -> `Settings` -> `Controls`) menu.
