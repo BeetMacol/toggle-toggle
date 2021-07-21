@@ -32,8 +32,8 @@ public class ToggleToggle {
 	}
 
 	public static void init() {
-		keySneakMode = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.toggle-toggle.toggle-sneak", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_Z, "Toggle Toggle"));
-		keySprintMode = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.toggle-toggle.toggle-sprint", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_X, "Toggle Toggle"));
+		keySneakMode = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.toggle-toggle.toggle-sneak", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_B, "Toggle Toggle"));
+		keySprintMode = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.toggle-toggle.toggle-sprint", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_V, "Toggle Toggle"));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if (keySneakMode.wasPressed()) {
