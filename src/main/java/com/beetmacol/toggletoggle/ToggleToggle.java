@@ -7,13 +7,10 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.network.MessageType;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.glfw.GLFW;
-
-import java.util.UUID;
 
 public class ToggleToggle {
 	public static final Logger LOGGER = LogManager.getLogger("Toggle Toggle");
@@ -37,11 +34,11 @@ public class ToggleToggle {
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if (keySneakMode.wasPressed()) {
-				if (client.options.sneakToggled) {
-					client.options.sneakToggled = false;
+				if (client.options.getSneakToggled().getValue()) {
+					client.options.getSneakToggled().setValue(false);
 					announceChange(client, Function.SNEAK, Method.HOLD);
 				} else {
-					client.options.sneakToggled = true;
+					client.options.getSneakToggled().setValue(true);
 					announceChange(client, Function.SNEAK, Method.TOGGLE);
 				}
 			}
@@ -49,11 +46,11 @@ public class ToggleToggle {
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if (keySprintMode.wasPressed()) {
-				if (client.options.sprintToggled) {
-					client.options.sprintToggled = false;
+				if (client.options.getSprintToggled().getValue()) {
+					client.options.getSprintToggled().setValue(false);
 					announceChange(client, Function.SPRINT, Method.HOLD);
 				} else {
-					client.options.sprintToggled = true;
+					client.options.getSprintToggled().setValue(true);
 					announceChange(client, Function.SPRINT, Method.TOGGLE);
 				}
 			}
@@ -65,10 +62,10 @@ public class ToggleToggle {
 	private static void announceChange(MinecraftClient client, Function function, Method method) {
 		LOGGER.info("Changed {} mode to {}", function, method);
 
-		TranslatableText text = new TranslatableText("toggle-toggle.switch." + function.toString().toLowerCase() + "." + method.toString().toLowerCase());
+		Text text =  Text.translatable("toggle-toggle.switch." + function.toString().toLowerCase() + "." + method.toString().toLowerCase());
 		switch (config.communicationWay) {
-			case ACTION -> client.inGameHud.addChatMessage(MessageType.GAME_INFO, text, new UUID(0, 0));
-			case CHAT -> client.inGameHud.addChatMessage(MessageType.CHAT, text, new UUID(0, 0));
+			case ACTION -> client.player.sendMessage(text, true);
+			case CHAT -> client.player.sendMessage(text, false);
 		}
 	}
 }
